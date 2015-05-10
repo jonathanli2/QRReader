@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pab-hI-pbX">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PgC-JC-Pa1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="Z9A-iR-9a5"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="qFl-ju-Pym"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PgC-JC-Pa1"/>
+                                        <exclude reference="Z9A-iR-9a5"/>
+                                        <exclude reference="qFl-ju-Pym"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="PgC-JC-Pa1"/>
+                                        <include reference="Z9A-iR-9a5"/>
+                                        <include reference="qFl-ju-Pym"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46l-VU-iaL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JdW-5p-dO4"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem width="20" systemItem="fixedSpace" id="szh-cr-dGd"/>
+                                    <barButtonItem title="Scan" id="WA4-oR-xPI">
+                                        <connections>
+                                            <action selector="start:" destination="BYZ-38-t0r" id="AAz-qQ-Fgd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="2WU-9z-snF"/>
+                                    <barButtonItem enabled="NO" title="Copy" id="EVy-Yp-bIP">
+                                        <connections>
+                                            <action selector="copy:" destination="BYZ-38-t0r" id="46g-7Z-ak3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="eCk-q8-joq"/>
+                                    <barButtonItem enabled="NO" title="Open Link" id="hnb-Wg-oR4">
+                                        <connections>
+                                            <action selector="launchSafari:" destination="BYZ-38-t0r" id="nMF-pc-Gjb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="20" systemItem="fixedSpace" id="gC2-9o-ZUu"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JdW-5p-dO4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="JdW-5p-dO4"/>
+                                    </mask>
+                                </variation>
+                            </toolbar>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6T-M2-HCJ">
+                                <rect key="frame" x="16" y="20" width="568" height="568"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G6T-M2-HCJ" secondAttribute="height" multiplier="1:1" id="HGJ-Hb-Ycx"/>
+                                    <constraint firstAttribute="width" secondItem="G6T-M2-HCJ" secondAttribute="height" multiplier="1:1" id="aFH-nT-ak4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HGJ-Hb-Ycx"/>
+                                        <exclude reference="aFH-nT-ak4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="HGJ-Hb-Ycx"/>
+                                        <include reference="aFH-nT-ak4"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="46l-VU-iaL" secondAttribute="trailing" id="3Tz-Zp-rGn"/>
+                            <constraint firstItem="G6T-M2-HCJ" firstAttribute="trailing" secondItem="Pab-hI-pbX" secondAttribute="trailing" id="4vm-SK-mnz"/>
+                            <constraint firstItem="46l-VU-iaL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7gO-vE-WR9"/>
+                            <constraint firstItem="Pab-hI-pbX" firstAttribute="top" secondItem="G6T-M2-HCJ" secondAttribute="bottom" constant="30" id="IhF-pp-bqk">
+                                <variation key="heightClass=regular" constant="26"/>
+                            </constraint>
+                            <constraint firstItem="G6T-M2-HCJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QuP-db-aLe"/>
+                            <constraint firstItem="46l-VU-iaL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XS9-BA-t8g"/>
+                            <constraint firstItem="46l-VU-iaL" firstAttribute="centerX" secondItem="Pab-hI-pbX" secondAttribute="centerX" id="jep-Sh-q7Q"/>
+                            <constraint firstItem="G6T-M2-HCJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="v6y-w4-UMK">
+                                <variation key="heightClass=regular" constant="14"/>
+                            </constraint>
+                            <constraint firstItem="Pab-hI-pbX" firstAttribute="leading" secondItem="G6T-M2-HCJ" secondAttribute="leading" id="x6l-aG-x23"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Pab-hI-pbX"/>
+                                <exclude reference="46l-VU-iaL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3Tz-Zp-rGn"/>
+                                <exclude reference="7gO-vE-WR9"/>
+                                <exclude reference="XS9-BA-t8g"/>
+                                <exclude reference="jep-Sh-q7Q"/>
+                                <exclude reference="IhF-pp-bqk"/>
+                                <exclude reference="x6l-aG-x23"/>
+                                <exclude reference="4vm-SK-mnz"/>
+                                <exclude reference="QuP-db-aLe"/>
+                                <exclude reference="v6y-w4-UMK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="Pab-hI-pbX"/>
+                                <include reference="46l-VU-iaL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3Tz-Zp-rGn"/>
+                                <include reference="7gO-vE-WR9"/>
+                                <include reference="XS9-BA-t8g"/>
+                                <include reference="jep-Sh-q7Q"/>
+                                <include reference="IhF-pp-bqk"/>
+                                <include reference="x6l-aG-x23"/>
+                                <include reference="4vm-SK-mnz"/>
+                                <include reference="QuP-db-aLe"/>
+                                <include reference="v6y-w4-UMK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnCopy" destination="EVy-Yp-bIP" id="sq4-iu-Y8d"/>
+                        <outlet property="btnOpenLink" destination="hnb-Wg-oR4" id="A25-p3-DHb"/>
+                        <outlet property="btnStart" destination="WA4-oR-xPI" id="W01-f4-Qvc"/>
+                        <outlet property="txtOutput" destination="Pab-hI-pbX" id="xwy-is-dPO"/>
+                        <outlet property="viewPreview" destination="G6T-M2-HCJ" id="Vps-DY-aKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
