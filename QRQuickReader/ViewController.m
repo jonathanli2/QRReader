@@ -5,6 +5,7 @@
 //  Created by Li, Jonathan on 4/11/15.
 //  Copyright (c) 2015 It21Learning. All rights reserved.
 //
+@import GoogleMobileAds;
 
 #import "ViewController.h"
 #import "ReaderHelper.h"
@@ -18,6 +19,7 @@
 
 - (IBAction)start:(id)sender;
 @property (nonatomic, strong) ReaderHelper* helper;
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 @end
 
 @implementation ViewController
@@ -25,6 +27,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.bannerView.adUnitID = @"ca-app-pub-4348078921501765/3024425936";
+    self.bannerView.rootViewController = self;
+
+    GADRequest *request = [GADRequest request];
+   // request.testDevices = @[ @"931c00b3c85655427c202ac78220629d" ];
+    [self.bannerView loadRequest:request];
+    
     if (!self.helper){
         self.helper = [[ReaderHelper alloc] init];
     }
