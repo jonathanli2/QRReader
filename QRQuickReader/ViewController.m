@@ -16,10 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnStart;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCopy;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnOpenLink;
-
-- (IBAction)start:(id)sender;
 @property (nonatomic, strong) ReaderHelper* helper;
-@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
+- (IBAction)start:(id)sender;
 @end
 
 @implementation ViewController
