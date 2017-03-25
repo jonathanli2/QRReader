@@ -95,6 +95,12 @@
                                             <action selector="launchSafari:" destination="BYZ-38-t0r" id="nMF-pc-Gjb"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="95J-nl-Mt9"/>
+                                    <barButtonItem enabled="NO" systemItem="action" id="CZS-cM-Uhv">
+                                        <connections>
+                                            <action selector="onShareButtonClicked:" destination="BYZ-38-t0r" id="glu-a1-rAY"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="20" systemItem="fixedSpace" id="gC2-9o-ZUu"/>
                                 </items>
                                 <variation key="default">
@@ -160,6 +166,7 @@
                         <outlet property="bannerView" destination="k1t-kl-ER0" id="brD-0B-9yY"/>
                         <outlet property="btnCopy" destination="EVy-Yp-bIP" id="sq4-iu-Y8d"/>
                         <outlet property="btnOpenLink" destination="hnb-Wg-oR4" id="A25-p3-DHb"/>
+                        <outlet property="btnShare" destination="CZS-cM-Uhv" id="T6O-XT-I7X"/>
                         <outlet property="btnStart" destination="WA4-oR-xPI" id="W01-f4-Qvc"/>
                         <outlet property="txtOutput" destination="Pab-hI-pbX" id="xwy-is-dPO"/>
                         <outlet property="viewPreview" destination="G6T-M2-HCJ" id="Vps-DY-aKn"/>

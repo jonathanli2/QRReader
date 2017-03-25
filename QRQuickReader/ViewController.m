@@ -16,12 +16,15 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnStart;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCopy;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnOpenLink;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnShare;
+
 @property (nonatomic, strong) ReaderHelper* helper;
 - (IBAction)start:(id)sender;
+- (IBAction)onShareButtonClicked:(id)sender;
+
 @end
 
 @implementation ViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -73,12 +76,22 @@
     self.btnCopy.enabled = NO;
     self.btnOpenLink.enabled = NO;
     self.txtOutput.text = @"";
+    self.btnShare.enabled = NO;
     [self.helper startRead: self.viewPreview onCompletion:^(NSString* output){
         self.txtOutput.text = output;
         self.btnCopy.enabled = true;
         self.btnOpenLink.enabled = true;
         self.btnStart.enabled = YES;
+        self.btnShare.enabled = YES;
     }];
+}
+
+- (IBAction)onShareButtonClicked:(id)sender {
+ 
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[self.txtOutput.text] applicationActivities:nil];
+
+    [self presentViewController:activityVC animated:YES completion:nil];
+ 
 }
 
 @end
